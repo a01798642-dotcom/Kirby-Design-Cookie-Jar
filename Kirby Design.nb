@@ -1,0 +1,679 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     21892,        669]
+NotebookOptionsPosition[     21170,        649]
+NotebookOutlinePosition[     21607,        666]
+CellTagsIndexPosition[     21564,        663]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+  "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "1.", " ", "Volume", " ", "of", " ", "the", " ", "main", " ", "body"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"volBody", "=", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"2", "*", 
+       RowBox[{"Sqrt", "[", 
+        RowBox[{"4", "-", 
+         RowBox[{"0.9", "*", 
+          RowBox[{"x", "^", "2"}]}], "-", 
+         RowBox[{"y", "^", "2"}]}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", 
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"4", "/", "0.9"}], "]"}]}], ",", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{"4", "/", "0.9"}], "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", 
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"4", "-", 
+           RowBox[{"0.9", "*", 
+            RowBox[{"x", "^", "2"}]}]}], "]"}]}], ",", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{"4", "-", 
+          RowBox[{"0.9", "*", 
+           RowBox[{"x", "^", "2"}]}]}], "]"}]}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "2.", " ", "Volume", " ", "of", " ", "the", " ", "upper", " ", "hat"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"volUpperHat", "=", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"x", "^", "2"}]}], "-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"1", "/", "2"}], ")"}], "*", 
+          RowBox[{"y", "^", "2"}]}], "+", "4"}], ")"}], "-", "1.5"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", 
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", "2.5", "]"}]}], ",", 
+        RowBox[{"Sqrt", "[", "2.5", "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", 
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"5", "-", 
+           RowBox[{"2", "*", 
+            RowBox[{"x", "^", "2"}]}]}], "]"}]}], ",", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{"5", "-", 
+          RowBox[{"2", "*", 
+           RowBox[{"x", "^", "2"}]}]}], "]"}]}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "3.", " ", "Volume", " ", "of", " ", "the", " ", "orange", " ", "brim", 
+    " ", "with", " ", "thickness", " ", "0.1"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"volOrangeBrim", "=", 
+    RowBox[{"Pi", "*", "3", "*", "2.5", "*", "0.1"}]}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "4.", " ", "Volume", " ", "of", " ", "the", " ", "left", " ", "arm"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"volLeftArm", "=", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"2", "*", 
+       RowBox[{"Sqrt", "[", 
+        RowBox[{"0.3", "-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"3", "/", "4"}], ")"}], "*", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"x", "+", "2.5"}], ")"}], "^", "2"}]}], "-", 
+         RowBox[{"y", "^", "2"}]}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", 
+        RowBox[{
+         RowBox[{"-", "2.5"}], "-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"0.3", "/", 
+           RowBox[{"(", 
+            RowBox[{"3", "/", "4"}], ")"}]}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"-", "2.5"}], "+", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"0.3", "/", 
+           RowBox[{"(", 
+            RowBox[{"3", "/", "4"}], ")"}]}], "]"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", 
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"0.3", "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"3", "/", "4"}], ")"}], "*", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"x", "+", "2.5"}], ")"}], "^", "2"}]}]}], "]"}]}], ",", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{"0.3", "-", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"3", "/", "4"}], ")"}], "*", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"x", "+", "2.5"}], ")"}], "^", "2"}]}]}], "]"}]}], 
+       "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "5.", " ", "Volume", " ", "of", " ", "the", " ", "right", " ", "arm"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"volRightArm", "=", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"2", "*", 
+       RowBox[{"Sqrt", "[", 
+        RowBox[{"0.3", "-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"3", "/", "4"}], ")"}], "*", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"x", "-", "2.5"}], ")"}], "^", "2"}]}], "-", 
+         RowBox[{"y", "^", "2"}]}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", 
+        RowBox[{"2.5", "-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"0.3", "/", 
+           RowBox[{"(", 
+            RowBox[{"3", "/", "4"}], ")"}]}], "]"}]}], ",", 
+        RowBox[{"2.5", "+", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"0.3", "/", 
+           RowBox[{"(", 
+            RowBox[{"3", "/", "4"}], ")"}]}], "]"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", 
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"0.3", "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"3", "/", "4"}], ")"}], "*", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"x", "-", "2.5"}], ")"}], "^", "2"}]}]}], "]"}]}], ",", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{"0.3", "-", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"3", "/", "4"}], ")"}], "*", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"x", "-", "2.5"}], ")"}], "^", "2"}]}]}], "]"}]}], 
+       "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "6.", " ", "Volume", " ", "of", " ", "the", " ", "left", " ", "foot"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"volLeftFoot", "=", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"0.3", "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", "/", "2"}], ")"}], "*", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"x", "+", "1.7"}], ")"}], "^", "2"}]}], "-", 
+        RowBox[{"y", "^", "2"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", 
+        RowBox[{
+         RowBox[{"-", "1.7"}], "-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"0.3", "/", 
+           RowBox[{"(", 
+            RowBox[{"1", "/", "2"}], ")"}]}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"-", "1.7"}], "+", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"0.3", "/", 
+           RowBox[{"(", 
+            RowBox[{"1", "/", "2"}], ")"}]}], "]"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", 
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"0.3", "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "/", "2"}], ")"}], "*", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"x", "+", "1.7"}], ")"}], "^", "2"}]}]}], "]"}]}], ",", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{"0.3", "-", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "/", "2"}], ")"}], "*", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"x", "+", "1.7"}], ")"}], "^", "2"}]}]}], "]"}]}], 
+       "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "7.", " ", "Volume", " ", "of", " ", "the", " ", "right", " ", "foot"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"volRightFoot", "=", 
+    RowBox[{"NIntegrate", "[", 
+     RowBox[{
+      RowBox[{"Sqrt", "[", 
+       RowBox[{"0.3", "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"1", "/", "2"}], ")"}], "*", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"x", "-", "1.7"}], ")"}], "^", "2"}]}], "-", 
+        RowBox[{"y", "^", "2"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", 
+        RowBox[{"1.7", "-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"0.3", "/", 
+           RowBox[{"(", 
+            RowBox[{"1", "/", "2"}], ")"}]}], "]"}]}], ",", 
+        RowBox[{"1.7", "+", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"0.3", "/", 
+           RowBox[{"(", 
+            RowBox[{"1", "/", "2"}], ")"}]}], "]"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", 
+        RowBox[{"-", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{"0.3", "-", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "/", "2"}], ")"}], "*", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"x", "-", "1.7"}], ")"}], "^", "2"}]}]}], "]"}]}], ",", 
+        RowBox[{"Sqrt", "[", 
+         RowBox[{"0.3", "-", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"1", "/", "2"}], ")"}], "*", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"x", "-", "1.7"}], ")"}], "^", "2"}]}]}], "]"}]}], 
+       "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "8.", " ", "Total", " ", "volume", " ", "in", " ", "cubic", " ", "units"}],
+    "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"volTotal", "=", 
+    RowBox[{
+    "volBody", "+", "volUpperHat", "+", "volOrangeBrim", "+", "volLeftArm", 
+     "+", "volRightArm", "+", "volLeftFoot", "+", "volRightFoot"}]}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"9.", " ", "Unit", " ", "conversion"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"scale", "=", "5"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"conversionFactor", "=", 
+    RowBox[{"scale", "^", "3"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"volBodyCm3", "=", 
+   RowBox[{"volBody", "*", "conversionFactor"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"volUpperHatCm3", "=", 
+   RowBox[{"volUpperHat", "*", "conversionFactor"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"volOrangeBrimCm3", "=", 
+   RowBox[{"volOrangeBrim", "*", "conversionFactor"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"volLeftArmCm3", "=", 
+   RowBox[{"volLeftArm", "*", "conversionFactor"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"volRightArmCm3", "=", 
+   RowBox[{"volRightArm", "*", "conversionFactor"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"volLeftFootCm3", "=", 
+   RowBox[{"volLeftFoot", "*", "conversionFactor"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"volRightFootCm3", "=", 
+   RowBox[{"volRightFoot", "*", "conversionFactor"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"volTotalCm3", "=", 
+    RowBox[{"volTotal", "*", "conversionFactor"}]}], ";"}], 
+  "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"10.", " ", "Results", " ", "in", " ", "cubic", " ", "units"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"resultsUnits", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\"\<Main body\>\"", ",", "volBody"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Upper hat\>\"", ",", "volUpperHat"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Orange brim with thickness 0.1\>\"", ",", "volOrangeBrim"}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Left arm\>\"", ",", "volLeftArm"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Right arm\>\"", ",", "volRightArm"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Left foot\>\"", ",", "volLeftFoot"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Right foot\>\"", ",", "volRightFoot"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Total approximate volume\>\"", ",", "volTotal"}], "}"}]}],
+      "}"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Grid", "[", 
+   RowBox[{
+    RowBox[{"Prepend", "[", 
+     RowBox[{
+      RowBox[{"resultsUnits", "/.", " ", 
+       RowBox[{"x_Real", ":>", 
+        RowBox[{"NumberForm", "[", 
+         RowBox[{"x", ",", 
+          RowBox[{"{", 
+           RowBox[{"10", ",", "4"}], "}"}]}], "]"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Part\>\"", ",", "\"\<Volume in cubic units\>\""}], 
+       "}"}]}], "]"}], ",", 
+    RowBox[{"Frame", "->", "All"}]}], "]"}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"11.", " ", "Results", " ", "in", " ", 
+    RowBox[{"cm", "^", "3"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"resultsCm3", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\"\<Main body\>\"", ",", "volBodyCm3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Upper hat\>\"", ",", "volUpperHatCm3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<Orange brim with thickness 0.1\>\"", ",", "volOrangeBrimCm3"}], 
+       "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Left arm\>\"", ",", "volLeftArmCm3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Right arm\>\"", ",", "volRightArmCm3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Left foot\>\"", ",", "volLeftFootCm3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Right foot\>\"", ",", "volRightFootCm3"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Total approximate volume\>\"", ",", "volTotalCm3"}], 
+       "}"}]}], "}"}]}], ";"}], "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Grid", "[", 
+   RowBox[{
+    RowBox[{"Prepend", "[", 
+     RowBox[{
+      RowBox[{"resultsCm3", "/.", " ", 
+       RowBox[{"x_Real", ":>", 
+        RowBox[{"NumberForm", "[", 
+         RowBox[{"x", ",", 
+          RowBox[{"{", 
+           RowBox[{"10", ",", "2"}], "}"}]}], "]"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Part\>\"", ",", "\"\<Volume in cm^3\>\""}], "}"}]}], 
+     "]"}], ",", 
+    RowBox[{"Frame", "->", "All"}]}], "]"}], "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"12.", " ", "Scale", " ", "summary"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Grid", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<Scale\>\"", ",", "\"\<1 unit = 5 cm\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Conversion factor\>\"", ",", "\"\<1 cubic unit = 125 cm^3\>\""}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Total volume in cubic units\>\"", ",", 
+       RowBox[{"NumberForm", "[", 
+        RowBox[{"volTotal", ",", 
+         RowBox[{"{", 
+          RowBox[{"10", ",", "4"}], "}"}]}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Total volume in cm^3\>\"", ",", 
+       RowBox[{"NumberForm", "[", 
+        RowBox[{"volTotalCm3", ",", 
+         RowBox[{"{", 
+          RowBox[{"10", ",", "2"}], "}"}]}], "]"}]}], "}"}]}], "}"}], ",", 
+   RowBox[{"Frame", "->", "All"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.9868565502518654`*^9, 3.9868565502518654`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"6ec8da72-415b-984c-b17d-72c48ec899f0"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"Part\"\>", "\<\"Volume in cubic units\"\>"},
+    {"\<\"Main body\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"35.3230\"\>",
+        ShowStringCharacters->False],
+       35.3229804670394,
+       AutoDelete->True],
+      NumberForm[#, {10, 4}]& ]},
+    {"\<\"Upper hat\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"13.8840\"\>",
+        ShowStringCharacters->False],
+       13.884014046782967`,
+       AutoDelete->True],
+      NumberForm[#, {10, 4}]& ]},
+    {"\<\"Orange brim with thickness 0.1\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"2.3562\"\>",
+        ShowStringCharacters->False],
+       2.356194490192345,
+       AutoDelete->True],
+      NumberForm[#, {10, 4}]& ]},
+    {"\<\"Left arm\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.7948\"\>",
+        ShowStringCharacters->False],
+       0.7947670619661797,
+       AutoDelete->True],
+      NumberForm[#, {10, 4}]& ]},
+    {"\<\"Right arm\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.7948\"\>",
+        ShowStringCharacters->False],
+       0.7947670619661797,
+       AutoDelete->True],
+      NumberForm[#, {10, 4}]& ]},
+    {"\<\"Left foot\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.4867\"\>",
+        ShowStringCharacters->False],
+       0.4866934415470199,
+       AutoDelete->True],
+      NumberForm[#, {10, 4}]& ]},
+    {"\<\"Right foot\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"0.4867\"\>",
+        ShowStringCharacters->False],
+       0.48669344154701977`,
+       AutoDelete->True],
+      NumberForm[#, {10, 4}]& ]},
+    {"\<\"Total approximate volume\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"54.1261\"\>",
+        ShowStringCharacters->False],
+       54.12611001104111,
+       AutoDelete->True],
+      NumberForm[#, {10, 4}]& ]}
+   },
+   AutoDelete->False,
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.986856552287512*^9},
+ CellLabel->"Out[43]=",ExpressionUUID->"c24e19c3-bf79-d146-9df1-7b9847ad98dc"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"Part\"\>", "\<\"Volume in cm^3\"\>"},
+    {"\<\"Main body\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"4415.37\"\>",
+        ShowStringCharacters->False],
+       4415.372558379925,
+       AutoDelete->True],
+      NumberForm[#, {10, 2}]& ]},
+    {"\<\"Upper hat\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"1735.50\"\>",
+        ShowStringCharacters->False],
+       1735.501755847871,
+       AutoDelete->True],
+      NumberForm[#, {10, 2}]& ]},
+    {"\<\"Orange brim with thickness 0.1\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"294.52\"\>",
+        ShowStringCharacters->False],
+       294.5243112740431,
+       AutoDelete->True],
+      NumberForm[#, {10, 2}]& ]},
+    {"\<\"Left arm\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"99.35\"\>",
+        ShowStringCharacters->False],
+       99.34588274577247,
+       AutoDelete->True],
+      NumberForm[#, {10, 2}]& ]},
+    {"\<\"Right arm\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"99.35\"\>",
+        ShowStringCharacters->False],
+       99.34588274577247,
+       AutoDelete->True],
+      NumberForm[#, {10, 2}]& ]},
+    {"\<\"Left foot\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"60.84\"\>",
+        ShowStringCharacters->False],
+       60.83668019337748,
+       AutoDelete->True],
+      NumberForm[#, {10, 2}]& ]},
+    {"\<\"Right foot\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"60.84\"\>",
+        ShowStringCharacters->False],
+       60.83668019337747,
+       AutoDelete->True],
+      NumberForm[#, {10, 2}]& ]},
+    {"\<\"Total approximate volume\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"6765.76\"\>",
+        ShowStringCharacters->False],
+       6765.763751380139,
+       AutoDelete->True],
+      NumberForm[#, {10, 2}]& ]}
+   },
+   AutoDelete->False,
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.986856552295828*^9},
+ CellLabel->"Out[45]=",ExpressionUUID->"c2546be9-bcd6-5942-b5a9-66630e373037"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"Scale\"\>", "\<\"1 unit = 5 cm\"\>"},
+    {"\<\"Conversion factor\"\>", "\<\"1 cubic unit = 125 cm^3\"\>"},
+    {"\<\"Total volume in cubic units\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"54.1261\"\>",
+        ShowStringCharacters->False],
+       54.12611001104111,
+       AutoDelete->True],
+      NumberForm[#, {10, 4}]& ]},
+    {"\<\"Total volume in cm^3\"\>", 
+     TagBox[
+      InterpretationBox[
+       StyleBox["\<\"6765.76\"\>",
+        ShowStringCharacters->False],
+       6765.763751380139,
+       AutoDelete->True],
+      NumberForm[#, {10, 2}]& ]}
+   },
+   AutoDelete->False,
+   GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{3.9868565523042526`*^9},
+ CellLabel->"Out[46]=",ExpressionUUID->"b6e78c27-c242-984b-8fa2-849afa58d4ca"]
+}, Open  ]]
+},
+WindowSize->{1152, 615.6},
+WindowMargins->{{
+  Automatic, -5.399999999999864}, {-5.399999999999977, Automatic}},
+FrontEndVersion->"14.1 para Microsoft Windows (64-bit) (July 16, 2024)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f9a97070-5a10-2746-a0b1-d979744c3c7d"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 15203, 446, 1444, "Input",ExpressionUUID->"6ec8da72-415b-984c-b17d-72c48ec899f0"],
+Cell[15782, 470, 2224, 73, 178, "Output",ExpressionUUID->"c24e19c3-bf79-d146-9df1-7b9847ad98dc"],
+Cell[18009, 545, 2206, 73, 178, "Output",ExpressionUUID->"c2546be9-bcd6-5942-b5a9-66630e373037"],
+Cell[20218, 620, 936, 26, 89, "Output",ExpressionUUID->"b6e78c27-c242-984b-8fa2-849afa58d4ca"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
